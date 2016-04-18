@@ -1,0 +1,129 @@
+@import "../../stylesheets/global.styl"
+#quiz
+  display flex
+  margin 3vw
+  .form_container
+    flex-basis 100%
+    padding 2vw
+    .intro
+      h3
+        background-color rgba(121, 85, 72, 0.65)
+        headSecondaryText(3vw, .3vw, 0, #CDDC39)
+        line-height 1.3
+        text-shadow none
+        text-align center
+        text-transform capitalize
+        border-radius 4vw
+
+    form.question
+      width 90%
+      margin 3vw auto
+      border 2px solid gainsboro
+      min-height 185px
+      position relative
+      text-transform capitalize
+      & *
+        padding 10px
+      input[type="number"]
+        display inline-block
+        width 15%
+        height 30px
+        margin 15px 20px
+        transition border 0.3s
+        text-align center
+        font-size 1.5vw
+        padding 5px
+        border-radius(.5vw)
+        &:focus
+          outline none
+          border: solid 2px #969696;
+      input[type="submit"]
+        width 50%
+        display block
+        margin 10px auto
+        padding 10px
+        transition border 0.5s
+        border none
+        background #4CAF50
+        border-radius(5px)
+        &:hover
+          outline none
+          border-bottom #7f1124 2px solid
+
+      .question_label
+        font-size 2vw
+        display inline-block
+        padding 5px
+        color white
+        &:after
+          content "?"
+
+      ul
+        no-extra()
+        list-style none
+        margin 5px
+        font-size 2vw
+        display flex
+        li
+          flex-basis 25%
+          cursor pointer
+          flex-wrap wrap
+          flex-grow 1
+          padding 10px
+          background #009688
+          margin 0 5px
+          border-radius 2vw
+          border 2px solid #8BC34A
+          transition all 200ms
+          &:before
+            content "\f10c"
+          &:hover
+            border-width 1px 8px
+            border-color gold
+            border-style solid dotted
+            color white;
+            font-size 110%
+            &:before
+              content "\f111"
+            label
+              cursor pointer
+    label.tips
+      position absolute
+      bottom 0
+      width 100%
+      box-sizing border-box
+      font-style oblique
+      color #FFEB3B
+      font-size 18px
+      animation-duration 4s
+      background #795548
+      height 40px
+      padding 5px
+      text-align center
+
+    #stephold
+      display flex
+      flex-direction row
+      flex-basis 100%
+      justify-content center
+      span
+        margin 5px
+        i
+          color #FFEB3B
+        i.fa-circle
+          animation flash 2s linear .5s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

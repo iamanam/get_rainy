@@ -1,0 +1,42 @@
+<template name="quiz">
+    <div id="quiz">
+        {{#animate type="lightSpeedIn" delay="500"}}
+            <div class="form_container">
+                <div class="intro">
+                    <h3>Lets start..</h3>
+
+                </div>
+
+                <form class="question">
+                    {{#with questionSet}}
+                        <label class="question_label"><i class="fa fa-dot-circle-o"></i> {{qs}}</label>
+                        {{#if option}}
+                            <ul class="fa-ul">
+                                {{#each item in option}}
+                                    <li class="fa" data-mark={{item.val}}>
+                                        <label class="option-val" for="f-option">{{item.title}}</label>
+                                    </li>
+                                {{/each}}
+
+                            </ul>
+                            <label class="tips animated flash"><i class="fa fa-hand-o-right"></i> Click any of those to
+                                proceed.</label>
+                        {{else}}
+                            <input type="number" class="ans style_1" required min="0" max="10"
+                                   placeholder="1-10">
+                            <input type="submit" value="Submit">
+                            <label class="tips animated  flash">** Tips:Select a number between 1-10.</label>
+
+                        {{/if}}
+                    {{/with}}
+                </form>
+                {{>step}}
+            </div>
+        {{/animate}}
+
+    </div>
+</template>
+<template name="step">
+    <div id="stephold">
+    </div>
+</template>
